@@ -4,8 +4,10 @@
     "type": "entry",
     "description": "$string:module_desc",
     "mainElement": "EntryAbility",
+    // 只声明平板：本项目仅在平板上做过真机验收（手机形态的预览/分屏行为未验证），
+    // 且只声明平板时 AGC 只要求提供**平板**截图素材。将来要在手机上架时，
+    // 加上 "phone"、先在真机验证，再补手机截图。
     "deviceTypes": [
-      "phone",
       "tablet"
     ],
     "deliveryWithInstall": true,
