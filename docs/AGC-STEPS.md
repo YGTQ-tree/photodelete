@@ -3,6 +3,32 @@
 > 起点：开发者账号已实名、应用已创建（App ID = `com.dsh.photodelete`）、**调试**证书与调试 Profile 已完成（用于 hdc 装机）。
 > 本文件只讲**从现在到上架**要做的事。每步都标明「谁做」：🖥 本机（我可以代跑）/ 🌐 AGC 控制台（只能你点）。
 
+## 命名与标识对照表（先对齐，后面所有步骤照这张表填）
+
+| 位置 | 填什么 | 说明 |
+|---|---|---|
+| **包名 / APP ID** | `com.dsh.photodelete` | **必须与代码 `AppScope/app.json5` 的 `bundleName` 完全一致**，AGC 侧不可改 |
+| AGC 应用名称（控制台） | `待删相机` | 控制台内识别用；建议与市场展示名一致 |
+| AppGallery 展示名 | `待删相机` | 若提示已被占用，用 `待删相机-随手拍清理` |
+| 应用内名称（代码） | `待删相机` | 已统一：`AppScope` 的 `app_name` 与 `entry` 的 `EntryAbility_label` 都是它 |
+| **发布证书名称** | `photodeleteRelease` | 与密钥库别名、CSR 文件名一致，便于对照 |
+| **发布 Profile 名称** | `photodeleteRelease` | 同上（调试那套当时叫 `photodeleteDebug`） |
+| 版本 | `versionName 1.0.0` / `versionCode 1000000` | 每次提审**必须递增 `versionCode`**（`AppScope/app.json5`） |
+
+## 阶段 0.5：先核对 APP ID 是否已存在（🌐 你操作，1 分钟）
+
+**需要 App ID 吗？需要。** 它是 AGC 里"应用"的标识，Profile 必须挂在它上面；而且**我们早就建过了**
+（阶段 0.2 的调试证书与调试 Profile 都是挂在 `com.dsh.photodelete` 上的）。
+
+核对路径（任一即可）：
+- **我的项目 → 应用**（应用列表里应有 `待删相机` / `com.dsh.photodelete`）
+- 或 **证书、APP ID 和 Profile → APP ID** 页，应能看到包名 `com.dsh.photodelete`
+
+若确实没有（说明当时是另一个账号或没建成功）：
+1. **证书、APP ID 和 Profile → APP ID → 新建**
+2. 应用类型选 **HarmonyOS 应用**；**包名必须填 `com.dsh.photodelete`**（与代码一致，写错就得改代码）
+3. 应用名称填 `待删相机` → 提交
+
 ## 阶段 0：已完成（回顾，不用再做）
 
 | # | 事项 | 状态 |
