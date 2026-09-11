@@ -116,8 +116,8 @@ struct Index {
   build() {
     Scroll() {
       Column({ space: 12 }) {
-        Text('PhotoDelete')
-          .fontSize(26)
+        Text('待删相机')
+          .fontSize(28)
           .fontWeight(FontWeight.Bold)
         Text('随手拍的照片，到期自动进「待删除」，一键清空')
           .fontSize(13)
@@ -233,6 +233,6 @@ struct Index {
     }
     .width('100%')
     .height('100%')
-    .align(Alignment.Center)
+    .align(Alignment.Top)
   }
 }
