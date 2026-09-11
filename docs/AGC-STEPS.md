@@ -21,7 +21,7 @@
 （阶段 0.2 的调试证书与调试 Profile 都是挂在 `com.dsh.photodelete` 上的）。
 
 核对路径（任一即可）：
-- **我的项目 → 应用**（应用列表里应有 `待删相机` / `com.dsh.photodelete`）
+- **我的应用（旧版/部分账号显示为「我的项目」） → 应用**（应用列表里应有 `待删相机` / `com.dsh.photodelete`）
 - 或 **证书、APP ID 和 Profile → APP ID** 页，应能看到包名 `com.dsh.photodelete`
 
 若确实没有（说明当时是另一个账号或没建成功）：
@@ -58,7 +58,7 @@ echo 口令在 signature/.keystore-release.pwd（权限 600，已被 .gitignore 
 
 ## 阶段 3：创建**发布 Profile**（🌐 AGC）
 
-1. **我的项目 → 选择应用 → 证书、App ID 和 Profile → Profile 管理 → 新增 Profile**
+1. **我的应用（旧版/部分账号显示为「我的项目」） → 选择应用 → 证书、App ID 和 Profile → Profile 管理 → 新增 Profile**
 2. Profile 类型选 **发布**
 3. 选择应用 `com.dsh.photodelete`，绑定阶段 2 的发布证书
 4. ⚠️ **发布 Profile 不需要、也不包含设备列表**（只有调试 Profile 才绑 UDID）
@@ -74,7 +74,7 @@ echo 口令在 signature/.keystore-release.pwd（权限 600，已被 .gitignore 
 
 ## 阶段 5：提审（🌐 AGC）
 
-1. **我的项目 → 应用 → 版本管理 → 添加版本**
+1. **我的应用（旧版/部分账号显示为「我的项目」） → 应用 → 版本管理 → 添加版本**
 2. 上传 `entry-default-release-signed.hap`
 3. 填**应用信息**：名称「待删相机」、图标用 `docs/artwork/app_icon_1024.png`、分类（工具/效率）、简介
 4. 上传**素材**：建议 4 张截图（首页 / 相机 / 我的照片 / 待删除）

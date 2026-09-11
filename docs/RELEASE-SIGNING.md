@@ -15,7 +15,7 @@ ls -l signature/photodeleteRelease.csr
 1. **用户与访问 → 证书管理 → 新增证书**
    - 类型选 **发布证书**（不是"调试证书"）
    - 上传 `signature/photodeleteRelease.csr` → 下载 `.cer` → 放进 `signature/`
-2. **我的项目 → 应用 → 证书、App ID 和 Profile → Profile 管理 → 新增 Profile**
+2. **我的应用（旧版/部分账号显示为「我的项目」） → 应用 → 证书、App ID 和 Profile → Profile 管理 → 新增 Profile**
    - 类型选 **发布**，选择本应用（`com.dsh.photodelete`），绑定上面的发布证书
    - **关键区别：发布 Profile 不含设备列表**（调试 Profile 才需要绑定 UDID），所以它能分发给所有用户
    - 下载 `.p7b` → 放进 `signature/`
@@ -29,7 +29,7 @@ ls -l signature/photodeleteRelease.csr
 
 ## 第 4 步：提审
 
-1. AGC → **我的项目 → 应用 → 版本管理 → 添加版本** → 上传 `entry-default-release-signed.hap`
+1. AGC → **我的应用（旧版/部分账号显示为「我的项目」） → 应用 → 版本管理 → 添加版本** → 上传 `entry-default-release-signed.hap`
 2. 填写提审表单（内容直接取 `docs/AGC-SUBMISSION.md`）：
    - 应用名称/图标（1024：`docs/artwork/app_icon_1024.png`）、简介、分类
    - 截图：建议"首页 / 相机 / 我的照片 / 待删除"各一张

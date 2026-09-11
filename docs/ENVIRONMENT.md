@@ -137,7 +137,7 @@ hdc list targets                                   # 期望出现设备序列号
 2. **换调试证书**：AGC → 用户与访问 → 证书管理 → 新增证书 → 类型选「**调试证书**」→
    上传 `signature/photodelete.csr` → 下载 `.cer`，保存为 `signature/photodelete.cer`。
 3. **建调试 Profile**：AGC → 用户与访问 → 设备管理 → **添加设备**（填上一步的 UDID）→
-   再到 我的项目 → 应用（HarmonyOS 应用，bundleName 必须是 `com.dsh.photodelete`，需先创建 App ID）→
+   再到 我的应用（旧版/部分账号显示为「我的项目」） → 应用（HarmonyOS 应用，bundleName 必须是 `com.dsh.photodelete`，需先创建 App ID）→
    证书、App ID 和 Profile → 新增 **Profile**（类型「调试」）→ 绑定第 2 步的证书 + 第 3 步的设备 →
    下载 `.p7b`，保存为 `signature/photodelete.p7b`。
 
