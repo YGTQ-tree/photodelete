@@ -1,0 +1,29 @@
+# HarmonyOS 构建产物
+build/
+build-output/
+.hvigor/
+.cxx/
+oh_modules/
+*.har
+*.hap
+*.hsp
+*.app
+
+# 签名材料（绝不入库）
+signature/
+*.p12
+*.cer
+*.p7b
+*.csr
+*.keystore
+
+# 本地环境与命令记录
+.env
+.env.local
+local.properties
+
+# 编辑器/系统
+.idea/
+.vscode/
+.DS_Store
+*.log

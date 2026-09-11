@@ -1,0 +1,16 @@
+{
+  "string": [
+    {
+      "name": "module_test_desc",
+      "value": "PhotoDelete 设备侧契约测试模块"
+    },
+    {
+      "name": "TestAbility_desc",
+      "value": "契约测试入口"
+    },
+    {
+      "name": "TestAbility_label",
+      "value": "PhotoDelete 测试"
+    }
+  ]
+}

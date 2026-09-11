@@ -1,0 +1,11 @@
+{
+  "src": [
+    "pages/Index",
+    "pages/CameraPage",
+    "pages/TrashPage",
+    "pages/SettingsPage",
+    "pages/CameraProbePage",
+    "pages/ShareImportPage",
+    "pages/PhotosPage"
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "string": [
+    {
+      "name": "module_desc",
+      "value": "随手拍自动待删主模块"
+    },
+    {
+      "name": "EntryAbility_desc",
+      "value": "PhotoDelete 入口"
+    },
+    {
+      "name": "EntryAbility_label",
+      "value": "待删相机"
+    },
+    {
+      "name": "screen_capture_reason",
+      "value": "用于在你点「截屏」时截取屏幕内容，并把截图纳入待删除管理"
+    },
+    {
+      "name": "camera_reason",
+      "value": "用于拍摄照片，并在你设定的时间后自动整理为待删除"
+    }
+  ]
+}

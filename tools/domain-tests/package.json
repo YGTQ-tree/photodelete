@@ -1,0 +1,6 @@
+{
+  "name": "photodelete-domain-tests",
+  "private": true,
+  "type": "module",
+  "description": "主机侧 L1 领域测试（不属于 HAP 构建，仅供 Node 运行）"
+}
