@@ -20,7 +20,7 @@ SIGN_TOOL="$TOOL_LIB/hap-sign-tool.jar"
 command -v java >/dev/null 2>&1 || { echo "[csr-rel] 缺少 java（见 ENVIRONMENT.md §1）" >&2; exit 2; }
 
 SIG_DIR="$ROOT_DIR/signature"
-ALIAS="${PD_KEY_ALIAS:-photodelete}"
+ALIAS="${PD_KEY_ALIAS:-photodeleteRelease}"
 KEYSTORE="$SIG_DIR/photodeleteRelease.p12"
 PWD_FILE="$SIG_DIR/.keystore-release.pwd"
 CSR="$SIG_DIR/photodeleteRelease.csr"

@@ -18,7 +18,10 @@ SIG="$ROOT_DIR/signature"
 SIGN_TOOL="${DEVECO_SDK_HOME:-}/default/openharmony/toolchains/lib/hap-sign-tool.jar"
 KEYSTORE="$SIG/photodeleteRelease.p12"
 PWD_FILE="$SIG/.keystore-release.pwd"
-ALIAS="photodeleteRelease"
+# ⚠️ 当前发布密钥库的别名是 photodelete（生成它的脚本当年沿用了调试别名）。
+# 若你以后用 ./scripts/gen-release-csr.sh 重新生成（新别名 photodeleteRelease），
+# 需要重新去 AGC 换证书，并在这里用 PD_KEY_ALIAS=photodeleteRelease 覆盖。
+ALIAS="${PD_KEY_ALIAS:-photodelete}"
 IN_HAP="$ROOT_DIR/entry/build/default/outputs/default/entry-default-unsigned.hap"
 OUT_HAP="$ROOT_DIR/build-output/entry-default-release-signed.hap"
 
