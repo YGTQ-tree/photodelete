@@ -69,3 +69,17 @@ echo "[release-sign] 3/3 完成"
 echo "[release-sign] 产物：$OUT_HAP"
 echo "[release-sign] 证书：$(basename "$CERT")   Profile：$(basename "$PROFILE")"
 echo "[release-sign] 下一步：把这个 HAP 上传到 AGC「版本管理」提交审核（材料见 docs/AGC-SUBMISSION.md）"
+
+echo "[release-sign] 4/4 构建并签名 **App Pack（.app，AGC 上架用）**"
+( cd "$ROOT_DIR" && hvigorw assembleApp --mode project -p product=default -p buildMode=release --no-daemon ) \
+  | grep -E "BUILD (SUCCESSFUL|FAILED)" || die "App Pack 构建失败"
+APP_IN="$(ls "$ROOT_DIR"/build/outputs/default/*-unsigned.app 2>/dev/null | head -1 || true)"
+[[ -n "$APP_IN" ]] || die "找不到未签名 .app（build/outputs/default/）"
+APP_OUT="$ROOT_DIR/build-output/PhotoDelete-release-signed.app"
+java -jar "$SIGN_TOOL" sign-app \
+  -mode localSign -signAlg SHA256withECDSA \
+  -keyAlias "$ALIAS" \
+  -keystoreFile "$KEYSTORE" -keystorePwd "$KS_PWD" -keyPwd "$KS_PWD" \
+  -appCertFile "$CERT" -profileFile "$PROFILE" \
+  -inFile "$APP_IN" -outFile "$APP_OUT" || die "App Pack 签名失败"
+echo "[release-sign] 上架包（AGC 上传这个）：$APP_OUT"
