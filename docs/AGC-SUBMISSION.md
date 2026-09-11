@@ -38,7 +38,7 @@
      `https://github.com/YGTQ-tree/photodelete/blob/main/docs/PRIVACY.md`
      （若要求可访问的网页，开启 GitHub Pages 或用任意静态托管即可。）
 - ⚠️ **发布前必须替换**：`docs/PRIVACY.md` 第 9 条里的开发者邮箱（当前是占位符
-  `photodelete@example.com`）改成你自己的邮箱；生效日期按实际提交日期调整。
+  `1837796757@qq.com`）改成你自己的邮箱；生效日期按实际提交日期调整。
 - 本应用可写进"收集情况"的核心结论：**不收集任何个人信息、不申请网络权限、无第三方 SDK**。
 
 ## 4. 供审核复现的功能路径（建议随附截图）
